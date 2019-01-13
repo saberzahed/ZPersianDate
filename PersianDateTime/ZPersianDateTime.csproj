@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.5</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Copyright></Copyright>
+    <PackageProjectUrl>https://github.com/saberzahed</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/saberzahed</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>PersianDate C# Date Persian Jalali Solare Date shamsi</PackageTags>
+    <Authors>Saber Zahed</Authors>
+    <Company>https://github.com/saberzahed</Company>
+    <Version>0.0.1</Version>
+    <Description>This is library for working with Date and it's instead of System.DateTime when need Jalali date in .net applications.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ICalander.cs" />
+    <Compile Remove="PersianCalander.cs" />
+    <Compile Remove="PersianDateExtended.cs" />
+  </ItemGroup>
+
+</Project>
