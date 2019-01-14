@@ -5,7 +5,7 @@
 
 # Implemented with
 ```
-  .net standard 1.5
+  .net standard 1.5 and later
 ```
 
 # Prerequisites
@@ -15,7 +15,7 @@
 
 # Install
 ```
-Install-Package ZPersianDateTime 
+Install-Package ZPersianDateTime -Version 0.0.2
 ```
 or 
 
