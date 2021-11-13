@@ -1,15 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ZPersianDateTime
+﻿namespace ZPersianDateTime
 {
     internal class HolidayDate
     {
-        public PersianDayOfWeek DayOfWeek { get; set; }
-        public int Month { get; set; }
-        public int Day { get; set; }
-        public string Description { get; set; }
+        public static HolidayDate Create( int month, int day, string description)=>
+             new HolidayDate(month, day, description);
+    
+        private HolidayDate( int month, int day, string description)
+        {
+            Month = month;
+            Day = day;
+            Description = description;
+        }
+        public int Month { get;  }
+        public int Day { get;  }
+        public string Description { get;  }
 
 
     }

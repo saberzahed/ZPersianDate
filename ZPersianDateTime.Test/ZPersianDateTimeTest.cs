@@ -1,151 +1,151 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using Xunit;
 
 namespace ZPersianDateTime.Test
 {
-    [TestClass]
     public class ZPersianDateTimeTest
     {
-        [TestMethod]
+        [Fact]
         public void AssignDateToPersianDate()
         {
+
             /// 2019-01-13 ~ 1397-10-23
             PersianDate persianDate = new DateTime(2019, 01, 13);
-            Assert.AreEqual(persianDate.Year, 1397);
-            Assert.AreEqual(persianDate.Month, 10);
-            Assert.AreEqual(persianDate.Day, 23);
+            Assert.Equal(1397, persianDate.Year);
+            Assert.Equal(10, persianDate.Month);
+            Assert.Equal(23, persianDate.Day);
         }
 
-        [TestMethod]
+        [Fact]
         public void AssignPersianDateToDate()
         {
             /// 2019-01-13 ~ 1397-10-23
-            DateTime date = new PersianDate(1397,10,23);
-            Assert.AreEqual(date.Year, 2019);
-            Assert.AreEqual(date.Month, 01);
-            Assert.AreEqual(date.Day, 13);
+            DateTime date = (DateTime)new PersianDate(1397,10,23);
+            Assert.Equal(2019, date.Year);
+            Assert.Equal(01, date.Month);
+            Assert.Equal(13, date.Day);
         }
 
 
-        [TestMethod]
+        [Fact]
         public void BeginOfMonthTest()
         {
             ///  1397-10-23 ~ 1397-10-01
             var date = new PersianDate(1397, 10, 23);
             var bom = date.BeginOfMonth();
 
-            Assert.AreEqual(bom.Year,1397);
-            Assert.AreEqual(bom.Month,10);
-            Assert.AreEqual(bom.Day,1);
+            Assert.Equal(1397,bom.Year);
+            Assert.Equal(10,bom.Month);
+            Assert.Equal(1,bom.Day);
         }
 
-        [TestMethod]
+        [Fact]
         public void EndOfMonthTest()
         {
             ///  1397-10-23 ~ 1397-10-30
             var date = new PersianDate(1397, 10, 23);
             var bom = date.EndOfMonth();
 
-            Assert.AreEqual(bom.Year, 1397);
-            Assert.AreEqual(bom.Month, 10);
-            Assert.AreEqual(bom.Day, 30);
+            Assert.Equal(1397, bom.Year);
+            Assert.Equal(10, bom.Month);
+            Assert.Equal(30, bom.Day);
         }
 
 
-        [TestMethod]
+        [Fact]
         public void BeginOfWeekTest()
         {
             ///  1397-10-23 ~ 1397-10-01
             var date = new PersianDate(1397, 10, 23);
             var bom = date.BeginOfWeek();
 
-            Assert.AreEqual(bom.Year, 1397);
-            Assert.AreEqual(bom.Month, 10);
-            Assert.AreEqual(bom.Day, 22);
+            Assert.Equal(1397, bom.Year);
+            Assert.Equal(10, bom.Month);
+            Assert.Equal(22, bom.Day);
         }
 
-        [TestMethod]
+        [Fact]
         public void EndOfWeekTest()
         {
             ///  1397-10-23 ~ 1397-10-30
             var date = new PersianDate(1397, 10, 23);
             var bom = date.EndOfWeek();
 
-            Assert.AreEqual(bom.Year, 1397);
-            Assert.AreEqual(bom.Month, 10);
-            Assert.AreEqual(bom.Day, 28);
+            Assert.Equal(1397, bom.Year);
+            Assert.Equal(10, bom.Month);
+            Assert.Equal(28, bom.Day);
         }
 
 
-        [TestMethod]
+        [Fact]
         public void BeginOfYearTest()
         {
             ///  1397-10-23 ~ 1397-10-01
             var date = new PersianDate(1397, 1, 1);
             var bom = date.BeginOfYear();
 
-            Assert.AreEqual(bom.Year, 1397);
-            Assert.AreEqual(bom.Month, 1);
-            Assert.AreEqual(bom.Day, 1);
+            Assert.Equal(1397, bom.Year);
+            Assert.Equal(1, bom.Month);
+            Assert.Equal(1, bom.Day);
         }
 
-        [TestMethod]
+        [Fact]
         public void EndOfYearTest()
         {
             ///  1397-10-23 ~ 1397-10-30
             var date = new PersianDate(1397, 10, 23);
             var bom = date.EndOfYear();
 
-            Assert.AreEqual(bom.Year, 1397);
-            Assert.AreEqual(bom.Month, 12);
-            Assert.AreEqual(bom.Day, 29);
+            Assert.Equal(1397, bom.Year);
+            Assert.Equal(12, bom.Month);
+            Assert.Equal(29, bom.Day);
         }
 
 
 
-        [TestMethod]
+        [Fact]
         public void EqualAndGotoWeekTest()
         {
             var date = new PersianDate(1397, 1, 1).GotoWeeks(2);
             var date2 = new PersianDate(1397, 1, 15);
 
-            Assert.IsTrue(date.Equals(date2));
+            Assert.True(date.Equals(date2));
         }
 
-        [TestMethod]
+        [Fact]
         public void EqualAndGotoDayTest()
         {
             var date = new PersianDate(1397, 1, 1).GotoDays(10);
             var date2 = new PersianDate(1397, 1, 11);
 
-            Assert.IsTrue(date.Equals(date2));
+            Assert.True(date.Equals(date2));
         }
 
-        [TestMethod]
+        [Fact]
         public void EqualAndGotoMonthTest()
         {
             var date = new PersianDate(1397, 1, 1).GotoMonths(1);
             var date2 = new PersianDate(1397, 2, 1);
 
-            Assert.IsTrue(date.Equals(date2));
+            Assert.True(date.Equals(date2));
         }
 
-        [TestMethod]
+        [Fact]
         public void EqualAndGotoYearTest()
         {
             var date = new PersianDate(1397, 1, 1).GotoYears(1);
             var date2 = new PersianDate(1398, 1, 1);
 
-            Assert.IsTrue(date.Equals(date2));
+            Assert.True(date.Equals(date2));
         }
 
 
-        [TestMethod]
+        [Fact]
         public void IsHolidayTest()
         {
             var date = new PersianDate(1397, 11, 22);
             
-            Assert.IsTrue(date.IsHoliday);
+            Assert.True(date.IsHoliday);
         }
 
     }
