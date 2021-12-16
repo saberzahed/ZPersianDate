@@ -1,7 +1,9 @@
-# ZPersianDate 
+# ZPersianDate
+<p align="center">
 <img src='https://img.shields.io/nuget/v/ZPersianDateTime'/>
 <img src='https://img.shields.io/nuget/dt/ZpersianDateTime?style=flat'/>
-[![Nuget](https://img.shields.io/nuget/v/ZPersianDateTime)](https://img.shields.io/nuget/v/ZPersianDateTime)
+</p
+
 
 ## Persian Date Time For .Net 
 
