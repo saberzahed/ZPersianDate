@@ -1,5 +1,4 @@
-# ZPersianDate
-[Nuget Page](https://img.shields.io/nuget/v/ZPersianDateTime)
+# ZPersianDate <img src='https://img.shields.io/nuget/v/ZPersianDateTime'/>
 ## Persian Date Time For .Net 
 
 ###### This is library for working with Date and it's instead of System.DateTime when need Jalali date in .net applications.
