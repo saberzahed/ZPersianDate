@@ -1,5 +1,5 @@
 # ZPersianDate
-<p align="center">
+<p">
 <img src='https://img.shields.io/nuget/v/ZPersianDateTime'/>
 <img src='https://img.shields.io/nuget/dt/ZpersianDateTime?style=flat'/>
 </p
