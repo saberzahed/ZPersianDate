@@ -31,7 +31,7 @@ Go to [Nuget Page](https://www.nuget.org/packages/ZPersianDateTime/).
 # Example Usage 
 
 
-## Assign System.Date to PersianDate and in reverse
+## Cast System.Date to PersianDate and vice versa
   ~~~
   PersianDate persianDate = new DateTime(2019, 01, 13);
   PersianDate persianDate = DateTime.Today;
@@ -42,7 +42,7 @@ Go to [Nuget Page](https://www.nuget.org/packages/ZPersianDateTime/).
   
 ~~~
 
-## Defined most usage method that persian developer need it
+## Built-in most usage function 
   ~~~
    var date = new PersianDate(1397, 10, 23);
    
