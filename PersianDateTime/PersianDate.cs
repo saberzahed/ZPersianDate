@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace ZPersianDateTime
 {
-    public struct PersianDate
+    public struct PersianDate : IEquatable<PersianDate>
     {
         private static readonly PersianCalendar Calendar = new();
 
@@ -365,6 +365,8 @@ namespace ZPersianDateTime
         }
 
         public static implicit operator DateTime(PersianDate date) => date._date;
+        
+        
 
         #region Private Section
 

@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFrameworks>net5.0;net6.0;net8.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Copyright>2021</Copyright>
+    <Copyright>2024</Copyright>
     <PackageProjectUrl>https://github.com/saberzahed</PackageProjectUrl>
     <RepositoryUrl>https://github.com/saberzahed</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
@@ -13,7 +13,7 @@
     <Version>0.0.1</Version>
     <Description>This is library for working with Date and it's instead of System.DateTime when need Jalali date in .net applications.</Description>
     <IsPackable>true</IsPackable>
-    <PackageVersion>0.0.3</PackageVersion>
+    <PackageVersion>0.0.4</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>

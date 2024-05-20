@@ -148,5 +148,17 @@ namespace ZPersianDateTime.Test
             Assert.True(date.IsHoliday);
         }
 
+        
+        [Fact]
+        public void IsEqual()
+        {
+            var date1 = new PersianDate(1397, 11, 22);
+            var date2 = new PersianDate(1397, 11, 22);
+            
+            Assert.True(date1.Equals(date2));
+        }
+
+        
+        
     }
 }
